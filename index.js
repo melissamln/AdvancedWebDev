@@ -5,7 +5,7 @@ const port = 3000;
 const stores = require('./stores.json'); 
 
 app.get('/', (req, res) => {
-  res.json('Hello, World!');
+  res.json(stores);
 });
 
 app.listen(port, () => {
