@@ -1,10 +1,12 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-const stores = require('./stores.json'); 
+const stores = require("./stores.json");
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
+  const { storename } = req.query;
+
   res.json(stores);
 });
 
