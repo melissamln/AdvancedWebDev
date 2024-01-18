@@ -28,6 +28,16 @@ app.get("/stores/:district", (req, res) => {
   res.json(storesInDistrict);
 });
 
+//adding a store but not the the json
+//  coma in express means move to the next thing
+
+app.post("/", express.json(), (req, res) => {
+  const { body } = req;
+  console.log(body);
+  stores.push(body);
+  res.send("store added");
+});
+
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });
