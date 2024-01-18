@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.delete("/", (req, res) => {
   const { storename } = req.query;
   const storeIndex = stores.findIndex((row) => row.name === storename); // for loop that returns the index of that line
-  if (storeIndex === -1) {
+  if (storeIndex !== -1) {
     stores.splice(storeIndex, 1);
     res.send("store deleted");
   } else {
