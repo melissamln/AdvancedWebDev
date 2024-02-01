@@ -22,7 +22,7 @@ class ModelClass {
         name text 
         url text 
         district text 
-        CONSTRAINT stores_pkey PRIMRAY KEY
+        CONSTRAINT stores_pkey PRIMRAY KEY (id)
     )`);
   }
 }
